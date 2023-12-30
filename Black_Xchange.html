@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Xchange</title>
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Kalnia">
+<link rel="stylesheet" href="Black_Xchange.css">
+<script src="friendRequest.js"></script>
+</head>
+<body>
+
+  <nav class="custom-nav">
+    <div class="logo">Black Xchange</div>
+    <div class="menu-items">
+      <div class="item"><a href="index.html" class="link">Home</a></div>
+      <div class="item"><a href="notifications.html" class="link">Notification</a></div>
+      <div class="item">
+        <a href="messaging_system.html" class="link">
+            Messages <span class="notification-badge" id="messageCount">0</span>
+        </a>
+    </div>
+    </div>
+    
+        <div class="profile">
+        <img src="assets/8505802-B-1-003.jpg
+        " alt="Profile" width="40" height="40">
+        <span>Jack Carter</span>
+      </div>
+    </div>
+  </nav>
+
+<div class="jumbotron">
+  <h1>BLACK XCHANGE</h1>
+
+  <div class="profile-container">
+    <img src="path-to-profile-image.jpg" alt="Profile Picture" id="profilePic" class="profile-pic" onclick="document.getElementById('profileInput').click();">
+    <input type="file" id="profileInput" style="display:none;" onchange="loadFile(event)" />
+</div>
+
+<nav class="profile-nav">
+  <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Videos</a></li>
+      <li><a href="#">History</a></li>
+      <!-- Add additional nav items here -->
+  </ul>
+</nav>
+
+<div class="section">
+  <div class="section-header">
+    <h2>Friends (<span id="friends-count">0</span>)</h2>
+      <input type="file" id="file-upload" style="display: none;" multiple />
+    </span>
+    <a href="Friends_List.html">See All</a>
+  </div>
+  <section id="friends-list" class="card-container">
+   <!-- Add friend cards here --> 
+  </section>
+</div>
+
+<main>
+    <div class="section">
+      <div class="section-header">
+        <h2>Photos (<span id="photo-count">0</span>)</h2>
+        <span class="upload-btn-wrapper">
+          <button id="upload-link">Upload Photos</button>
+          <input type="file" id="file-upload" style="display: none;" multiple />
+        </span>
+        <a href="#">See All</a>
+      </div>
+      <section id="gallery" class="card-container">
+        <!-- Uploaded images will be displayed here -->
+      </section>
+    </div>
+  </main>
+  
+  <div class="profile-card">
+    <h2>Personal Info</h2>
+
+    <div class="info">
+        <img src="assets/surprise.png" alt="Birthday" class="info-icon">
+        <span>Date of Birth:</span> <span id="dob">December 17, 1985</span>
+    </div>
+
+    <div class="info">
+        <img src="assets/equality.png" alt="Gender" class="info-icon">
+        <span>Gender:</span> <span id="gender">Male</span>
+    </div>
+
+    <div class="info">
+        <img src="assets/city-map.png" alt="Location" class="info-icon">
+        <span>City/State/Country:</span> <span id="location">San Francisco, California, USA</span>
+    </div>
+
+    <div class="info">
+        <img src="assets/email.png" alt="Email" class="info-icon">
+        <span>Email:</span> <span id="email">user@example.com</span>
+    </div>
+
+    <!-- Add more fields as necessary -->
+</div>
+
+  <div class="area"></div><nav class="main-menu">
+
+    <ul>
+
+        <li>
+
+            <a href="https://jbfarrow.com">
+
+                <i class="fa fa-home fa-2x"></i>
+
+                <span class="nav-text">
+
+                   Home
+
+                </span>
+
+            </a>
+
+         
+
+        </li>
+
+        <li class="has-subnav">
+
+            <a href="messaging_system.html">
+
+                <i class="fa fa-globe fa-2x"></i>
+
+                <span class="nav-text">
+
+                    Message
+
+                </span>
+
+            </a>
+
+           
+
+        </li>
+
+        <li class="has-subnav">
+
+            <a href="#">
+
+               <i class="fa fa-heart"></i>
+
+                <span class="nav-text">
+
+                    Favorite
+
+                </span>
+
+            </a>
+
+           
+
+        </li>
+
+        <li class="has-subnav">
+
+            <a href="#">
+
+               <i class="fa fa-handshake-o"></i>
+
+                <span class="nav-text">
+
+                    Friends List
+
+                </span>
+
+            </a>
+        </li>
+
+        <li>
+
+            <a href="#">
+
+                <i class="fa fa-comments fa-2x"></i>
+
+                <span class="nav-text">
+                     Chat
+                  </span>
+
+            </a>
+
+        </li>
+
+        <li>
+          <div id="notifications">
+              <!-- Notifications will get loaded here -->
+          </div>
+              <i class="fa fa-address-card"></i>
+              <span class="nav-text" data-user-id="TARGET_USER_ID">Add Friend</span>
+      </li>
+      
+      
+
+        <li class="has-subnav">
+
+          <a href="Settings.html">
+
+             <i class="fa fa-cog"></i>
+
+              <span class="nav-text">
+
+                  Settings
+
+              </span>
+
+          </a>
+
+         
+
+      </li>
+
+    </ul>
+
+
+
+    <ul class="logout">
+
+        <li>
+
+           <a href="Logout.html">
+
+                 <i class="fa fa-power-off fa-2x"></i>
+
+                <span class="nav-text">
+
+                    Logout
+
+                </span>
+
+            </a>
+
+        </li>  
+
+    </ul>
+
+  </nav>
+
+  <div id="chat-sidebar">
+    <div class="user" onclick="openChat('user1')">
+      <img src="assets/bbf705e9-8691-4f0f-a712-16f31811aa84.webp" alt="User 1">
+    </div>
+    <div class="user" onclick="openChat('user2')">
+      <img src="assets/8505802-B-1-003.jpg" alt="User 2">
+    </div>
+    <!-- More users -->
+  </div>
+  
+  <div id="chatbox" style="display:none;">
+    <div id="chat-header">
+      <img src="" id="chat-user-img" alt="Chat User">
+      <span id="chat-user-name">User Name</span>
+      <button onclick="closeChat()">Close</button>
+    </div>
+    <div id="chat-messages">
+      <!-- Messages will be displayed here -->
+    </div>
+    <input type="text" id="chat-input">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+  <footer class="simple-footer">
+    <p>© 2023 Black Xchange. All Rights Reserved.</p>
+  </footer>
+  <script src="Black_Xchange.js"></script>
+</body>
+</html>

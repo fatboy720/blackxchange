@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Form</title>
+    <link rel="stylesheet" type="text/css" href="signupForm.css">
+</head>
+<body>
+    <div class="signup-form">
+        <h2>Signup Form</h2>
+        <form id="signupForm" action="signup.php" method="post">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="text" name="firstName" placeholder="First Name" required><br>
+            <input type="number" name="age" placeholder="Age" required><br>
+            <input type="text" name="race" placeholder="Race"><br>
+            <input type="text" name="city" placeholder="City"><br>
+            <input type="text" name="state" placeholder="State"><br>
+            <select name="gender">
+                <option value="" disabled selected>Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>
+            <select name="maritalStatus">
+                <option value="" disabled selected>Marital Status</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="other">Other</option>
+            </select><br>
+            <textarea name="aboutMe" placeholder="About Me"></textarea><br>
+            <textarea name="lookingFor" placeholder="Looking For"></textarea><br>
+            <button type="submit" name="submit">Submit</button>
+        </form>
+    </div>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+        include 'db_config.php'; // Include the database configuration file
+
+        // Sanitize and validate input data
+        $username = $conn->real_escape_string($_POST['username']);
+        $email = $conn->real_escape_string($_POST['email']);
+        $password = $conn->real_escape_string($_POST['password']);
+        // ...sanitize and validate other fields...
+
+        // Hash the password
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        // Prepare your SQL statement
+        $sql = "INSERT INTO users (username, email, password, firstName, age, race, city, state, gender, maritalStatus, aboutMe, lookingFor) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        if($stmt = $conn->prepare($sql)){
+            $stmt->bind_param("ssssisssssss", $username, $email, $hashed_password, $_POST['firstName'], $_POST['age'], $_POST['race'], $_POST['city'], $_POST['state'], $_POST['gender'], $_POST['maritalStatus'], $_POST['aboutMe'], $_POST['lookingFor']);
+            
+            if($stmt->execute()){
+                echo "<div>Account created successfully.</div>";
+            } else {
+                echo "<div>Error: " . $stmt->error . "</div>";
+            }
+            $stmt->close();
+        }
+        $conn->close();
+    }
+    ?>
+
+    <script src="signupForm.js"></script>
+</body>
+</html>

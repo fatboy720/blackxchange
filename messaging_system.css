@@ -1,0 +1,47 @@
+
+.messaging-container {
+    background-color: #000;
+    width: 400px;
+    margin: auto;
+    border: 1px solid #dba900;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.messages-container {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #dba900;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.message-input-container {
+    display: flex;
+}
+
+.message-input-container input {
+    flex-grow: 1;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.message-input-container button {
+    padding: 5px;
+}
+
+.message-bubble {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.message-photo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}

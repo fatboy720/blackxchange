@@ -1,0 +1,42 @@
+.friends-list-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #000;
+    color: gold;
+}
+
+.friends-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.friend-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid gold;
+}
+
+.friend-name {
+    margin-right: auto;
+}
+
+.delete-btn, .report-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.report-btn {
+    background-color: blue;
+}
+
+.delete-btn:hover, .report-btn:hover {
+    opacity: 0.8;
+}

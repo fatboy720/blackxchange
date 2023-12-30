@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="Edit_Profile.css">
+</head>
+<body>
+    <div class="edit-profile-container">
+        <form>
+            <input type="text" id="firstName" placeholder="First Name" required><br>
+            <select id="race" required>
+                <option value="">Select Race</option>
+                <option value="asian">Asian</option>
+                <option value="black">Black/African</option>
+                <option value="hispanic">Hispanic/Latino</option>
+                <option value="white">White</option>
+                <option value="mixed">Mixed</option>
+                <option value="other">Other</option>
+            </select><br>
+            <input type="text" id="city" placeholder="City"><br>
+            <input type="text" id="state" placeholder="State"><br>
+            <input type="text" id="Country" placeholder="Country"><br>
+            <select id="gender">
+                <option value="">Select Gender</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+            </select><br>
+            <button type="submit">Update Profile</button>
+            <button onclick="window.location.href='Black_Xchange.html'">Back to Profile</button>
+        </form>
+    </div>
+</body>
+</html>

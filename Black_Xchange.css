@@ -1,0 +1,531 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background: url('assets/DALL·E 2023-12-26 12.09.40 - Create a luxurious and elegant dark black background texture, featuring a deeper shade of black with diamond tufting patterns and golden buttons. The .png');
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-attachment: fixed;
+  }
+
+  @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+  @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+
+.fa-2x {
+font-size: 2em;
+
+}
+
+.jumbotron {
+    background: url('assets/DALL·E 2023-12-04 00.49.24 - A panoramic, widescreen image of a luxurious and elegant bedroom with a theme of black and gold. The bedroom features sophisticated decor, with a blac.png') no-repeat center center;
+    height: 250px; /* Adjust to your Jumbotron height */
+    color: #dba900; /* Adjust the text color as needed */
+    font-family: 'Kalnia', serif;
+    max-width: 100%;
+    margin: 20%;
+    margin-top: 4%;
+    text-align: center;
+}
+
+.profile-container {
+  display: flex; /* Use flexbox to align children */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  position: absolute;
+  bottom: 63%; /* Adjust this value so that the profile picture overlaps the jumbotron */
+  transform: translateX(-50%);
+  z-index: 3s;
+  right: 65%;
+}
+
+#profilePic {
+  width: 150px; /* Adjust size as needed */
+  height: 130px; /* Adjust size as needed */
+  border-radius: 50%;
+  border: 3px solid #dba900;
+  object-fit: cover;
+  color: #000000;
+  margin-bottom: -35%;
+}
+
+.profile-nav {
+    background-color: #000000; /* Light background for the nav */
+    box-shadow: 0 2px 4px rgba(0,0,0,.1); /* Optional: add a shadow for depth */
+    padding: 10px 0;
+    margin-top: 150px; /* Adjust this so the nav sits directly underneath the jumbotron */ 
+    border: 1px solid #dba900;
+  }
+
+.profile-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-nav ul li a {
+    text-decoration: none;
+    color: #dba900;
+    padding: 0 15px;
+}
+
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+    background-color: #000000; /* Navigation bar color */
+    padding: 5px 0;
+    width: 60%; /* Same width as the wrapper */
+    margin-left: 20%; /* Aligns with the wrapper */
+    position: relative; /* Remove absolute positioning */
+    margin: -50%; /* Push down by the profile picture's radius */
+    z-index: 1;
+    right: 0px;
+  }
+
+  .nav-bar a {
+    color: #dba900;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: larger;
+  }
+
+  .nav-bar a:hover {
+    text-decoration: underline;
+  }
+
+  .section {
+  width: 1000px;
+  margin: 130px auto 20px; /* Centered horizontally with auto margins */
+  padding: 15px;
+  background: #000000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 2px solid #dba900;
+  font-family: 'Kalnia', serif;
+  margin-top: 6%;
+}
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .section-header h2 {
+    margin: 0;
+    color: #dba900;
+    font-size: 18px;
+  }
+
+  .section-header a {
+    text-decoration: none;
+    color: #dba900;
+    font-size: 14px;
+  }
+
+  .card-container {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .card {
+    margin-right: 10px;
+    width: 120px;
+    text-align: center;
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 5px;
+  }
+
+  .card p {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+  }
+
+  .card .mutual-friends {
+    color: #777;
+    font-size: 12px;
+  }
+
+  /* Additional styling for buttons under the profile picture */
+  .profile-picture-container button {
+  background: #000;
+  color: #dba900;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: inline-block; /* Change to inline-block if you want to be able to set the width */
+  margin-top: 5px;
+  width: auto; /* Adjust this as needed to fit the size of the profile picture container */
+  /* Centering the button if it's not full width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Add space between images */
+  justify-content: center;
+  padding: 10px;
+  margin-top: 1%;
+  border: 1px solid #dba900;
+  overflow: auto; /* Allows scrolling if the content overflows */
+}
+
+#gallery img {
+  max-width: 100%; /* Ensure images are not wider than their container */
+  max-height: 120px; /* Adjust max-height as needed */
+  object-fit: cover; /* This will cover the area of the box without stretching the image */
+}
+
+
+
+.image-card {
+      border: 2px solid #dba900;
+      border-radius: 4px;
+      padding: 5px;
+    }
+
+.image-card img {
+      max-width: 100px; /* Set a fixed size or use max-width for responsive images */
+      max-height: 100px;
+      border-radius: 4px;
+    }
+
+    .upload-btn-wrapper {
+  display: inline-block; /* Allows the button to sit next to the link */
+  margin-left: 20px; /* Spacing between the button and the link */
+  background: #000000; /* Black background for the button */
+  color: #dba900; /* Gold text color */
+  border: 2px solid #dba900; /* Gold border for the button */
+  padding: 8px 12px; /* Padding inside the button */
+  font-weight: bold; /* Makes the text bold */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  border-radius: 4px; /* Slightly rounded corners for the button */
+}
+
+/* Style for the text inside the button to ensure it inherits the button color */
+.upload-btn-wrapper button {
+  background: inherit;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* Style for hover effect */
+.upload-btn-wrapper button:hover {
+  background: #dba900; /* Gold background for hover state */
+  color: #000000; /* Black text color for hover state */
+}
+
+
+  .simple-footer {
+  background-color: #000000; /* Dark background for the footer */
+  color: #dba900; /* Gold text color */
+  text-align: center; /* Center the text */
+  padding: 2px 0; /* Padding on top and bottom for some space */
+  font-size: 14px; /* Smaller font size for the footer text */
+  position: fixed; /* Fixed positioning relative to the viewport */
+  bottom: 0%; /* Align to the bottom of the viewport */
+  left: 0; /* Align to the left of the viewport */
+  width: 100%; /* Full width */
+  z-index: 1000; /* High z-index to ensure it's above other content */
+  border: 1px solid #dba900;
+}
+
+.profile-card {
+  background-color: #000000;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 200px; /* Set an exact width for the card */
+  color: #dba900;
+  border: 2px solid #dba900;
+  position: absolute; /* Use absolute positioning */
+  left: 5%; /* Align to the left side of the page */
+  bottom: 0%; /* Adjust as needed for the vertical position */
+  margin-left: 10px; /* Add some margin if needed */
+}
+
+.profile-card h2 {
+    font-size: 20px;
+    color: #dba900;
+}
+
+.profile-card .info {
+    margin-bottom: 50px;
+}
+
+.profile-card .info span {
+    font-weight: bold;
+    color: #dba900;
+}
+
+.profile-card .info-icon {
+    width: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between; /* This will push the profile card to the left and content to the right */
+    align-items: flex-start; /* Align items at the top */
+    padding-top: 50px; /* Add padding to ensure content is not touching the very top of the viewport */
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+
+h1 {
+   font-size: 80px;
+   margin-top: 10px;
+}
+
+.main-menu:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+
+}
+
+ .main-menu {
+    width: 60px;
+    overflow: hidden;
+    -webkit-transition: width .05s linear;
+    transition: width .05s linear;
+    -webkit-transform: translateZ(0) scale(1,1);  
+    background: #000000;
+    border-left: 1px solid #dba900;
+    position: fixed;
+    top: -2%;
+    right: 0;
+    height: 99%;
+    z-index: 1000;
+
+}
+
+.main-menu>ul {
+margin:7px 0;
+list-style: none; /* Remove default list styling */
+padding: 0;
+
+}
+
+ .main-menu li {
+position:relative;
+display:block;
+width:250px;
+margin-bottom: 13px;
+margin-top: 15px;
+}
+
+ .main-menu li a {
+position:relative;
+display:flex;
+align-items: center;
+padding: 15px;
+border-collapse:collapse;
+border-spacing:0;
+color:#dba900;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 28px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+font-weight: bolder;
+}
+
+.main-menu li a i {
+  font-size: 24px; /* Increase icon size */
+  width: 40px; /* Set width to align icons nicely */
+  text-align: center;
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:80px;
+text-align:center;
+vertical-align:middle;
+font-size:90px;
+}
+
+.main-menu .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+font-family: 'Kalnia', sans-serif;
+font-size:24px;
+}
+
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+} 
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+
+}
+
+#chat-sidebar {
+  width: 70px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  background-color: #000000;
+  color: #dba900;
+  border: 1px solid #dba900;
+}
+
+.user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* Style your chatbox */
+#chatbox {
+  position: fixed;
+  top: 50%;
+  left: 5%;
+  width: 310px;
+  background-color: #000000;
+  border: 2px solid #dba900;
+  border-radius: 1px;
+  display: none; /* Hide by default */
+  color: #dba900;
+  padding: 7px;
+}
+
+#chat-header {
+  padding: 5px;
+  border-bottom: 1px solid #dba900;
+}
+
+#chat-messages {
+  height: 300px;
+  overflow-y: auto;
+}
+
+#chat-input {
+  width: calc(100% - 60px);
+  background-color: #000000;
+  color: #dba900;
+}
+
+.custom-nav {
+      background-color: #000000; /* Dark background */
+      color: #dba900;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 78px;
+    }
+
+    .custom-nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #dba900; /* Logo color */
+    }
+
+    .custom-nav .menu-items {
+      display: flex;
+      align-items: center;
+    }
+
+    .custom-nav .menu-items .item {
+      margin-left: 20px;
+    }
+
+    .custom-nav .profile {
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+    }
+
+    .custom-nav .profile img {
+      border-radius: 50%; /* Circular profile image */
+      margin-right: 10px;
+    }
+
+    .item {
+      color: #dba900;
+  }
+  
+  .notification-badge {
+      background-color: black;
+      color: #dba900;
+      border-radius: 50%;
+      padding: 0.5em;
+      margin-left: 0.5em;
+      font-size: 0.8em;
+      vertical-align: top;
+      display: inline-block;
+      min-width: 20px; /* Ensures the badge is circular for single digits */
+      text-align: center;
+      border: 1px solid #dba900;
+  }
+
+.link {
+    color: gold; /* Example color, change as needed */
+    text-decoration: none; /* Removes underline from links */
+    display: inline-block; /* Allows for the entire area to be clickable */
+    /* Add any additional styles here */
+}
+
+.link:hover {
+    text-decoration: underline; /* Adds underline on hover for visual feedback */
+    /* Add any additional hover effects here */
+}
+
+
+
+  
