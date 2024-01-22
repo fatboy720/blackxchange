@@ -1,0 +1,40 @@
+html, body {
+    height: 100%;
+    margin: 10%;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gold;
+    font-family: 'Kalnia', sans-serif;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.settings-container {
+    width: 50%; /* Adjust width as needed */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.settings-container section {
+    margin-bottom: 40px;
+    text-align: center; /* Center aligns the text for all child elements */
+}
+
+.settings-container h2 {
+    margin-bottom: 10px;
+}
+
+.settings-container a {
+    color: gold;
+    display: block; /* Ensures each link takes up the full width of the container */
+    margin: 10px 30px; /* Gives a top and bottom margin for spacing */
+    text-decoration: none;
+}
+
+.settings-container a:hover {
+    text-decoration: underline;
+}
+

@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+    color: #dba900;
+    font-family: Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #dba900;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form div {
+    flex: 0 0 48%; /* Adjust width for two columns */
+    margin-bottom: 20px; /* Space between rows */
+}
+
+label, input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em; /* Larger font size */
+}
+
+label {
+    background-color: #000000;
+    color: #dba900;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    background-color: #000000;
+    color: #dba900;
+    border: 1px solid #dba900;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #dba900;
+    color: black;
+    border: 1px solid #dba900;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b98a00;
+}
+
+span.website-name {
+    color: #dba900; /* Gold text color */
+    font-weight: bold; /* Bold font */
+    background-color: black; /* Black background */
+    padding: 10px 700px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    font-family: 'Kalnia', sans-serif; /* Font family */
+    font-size: x-large;
+}
+

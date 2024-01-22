@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Kalnia">
+    <link rel="stylesheet" href="login_style.css">
+</head>
+<body>
+<div class="backdrop">
+        <div class="logo">Black Xchange</div>
+    </div>
+    <div class="input-cover" onclick="removeCover(this)"></div>
+
+    <div class="login-container">
+        <form id="loginForm" class="login-form" action="login.php" method="post">
+            <h2>Black Xchange</h2>
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            
+            <div class="form-control">
+                <label for="remember-password">
+                    <input type="checkbox" id="remember-password"> Remember Password
+                </label>
+            </div>
+            <div class="form-control">
+                <a href="Forget_Password.html" class="forgot-password">Forget Password?</a>
+            </div>
+            <div class="form-control">
+                <button type="submit">Sign In</button>
+            </div>
+            <div class="form-control">
+                <button id="signupButton">Sign Up</button>
+                
+            </div>
+        </form>
+    </div>
+</div>
+<script src="login_script.js"></script>
+<footer class="footer">
+    <p>Copyright © Black Xchange. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

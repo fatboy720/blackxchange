@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: #dba900;
+}
+
+#profile-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#profile-container img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #333;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid #444;
+}
+
+/* Add more styles if needed */
+

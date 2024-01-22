@@ -1,0 +1,77 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: url('your-background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Your Font', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #d4af37; /* Adjust the color to match your design */
+}
+
+.jumbotron {
+    background: transparent;
+    text-align: center;
+    color: #d4af37; /* Adjust the color to match your design */
+}
+
+/* Profile picture */
+.profile-pic {
+    border-radius: 50%;
+    border: 3px solid #d4af37; /* Gold border */
+    height: 100px; /* Adjust based on your design */
+    width: 100px; /* Adjust based on your design */
+    object-fit: cover;
+    cursor: pointer; /* Indicates the image is clickable */
+}
+
+.friends-list-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #000;
+    color: gold;
+}
+
+.friends-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.friend-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid gold;
+}
+
+.friend-name {
+    margin-right: auto;
+}
+
+.delete-btn, .report-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.report-btn {
+    background-color: blue;
+}
+
+.delete-btn:hover, .report-btn:hover {
+    opacity: 0.8;
+}

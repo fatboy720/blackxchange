@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Inbox</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kalnia">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://cdn.jsdelivr.net/npm/emojionearea/dist/emojionearea.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/emojionearea/dist/emojionearea.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="messaging_system.css">
+    
+</head>
+<body>
+    <div class="inbox-container">
+        <div class="inbox-header">
+            <!-- Your header content -->
+        </div>
+        <div class="inbox-messages">
+            <!-- Single Message Preview -->
+            <a href="Message_center.html" class="message-preview-link">
+                <div class="message-preview">
+                    <div class="user-image">
+                        <img src="path-to-image1.jpg" alt="User 1">
+                    </div>
+                    <div class="message-info">
+                        <div class="user-name-location">
+                            <span class="user-name">Blessed...</span>,
+                            <span class="user-location">Southfield, MI</span>
+                        </div>
+                        <div class="last-message">Hi u doing</div>
+                    </div>
+                    <div class="message-actions">
+                        <form method="post" action="send_message.php">
+                            <input type="hidden" name="receiver_id" value="RECEIVER_ID_HERE">
+                        <button class="btn-message" onclick="event.stopPropagation(); openMessagePopup();">Message</button>
+                        <button class="btn-delete" onclick="deleteMessage(event, this)">Delete</button>
+                    </div>
+                </div>
+            </a>
+            <!-- Additional message previews -->
+        </div>
+    </div>
+    <script src="messaging_system.js"></script>
+</body>
+</html>

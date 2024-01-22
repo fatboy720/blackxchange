@@ -1,0 +1,538 @@
+html, body {
+background-image: url('assests/DALL·E 2023-12-04 00.49.24 - A panoramic, widescreen image of a luxurious and elegant bedroom with a theme of black and gold. The bedroom features sophisticated decor, with a blac.png');
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Kalnia', serif;
+    font-weight: bold;
+}
+
+.accordion-container {
+position: absolute;
+top: 0;
+left: 0;
+width: 15%;
+border: 1px solid #dba900;
+/* Additional styles as needed */
+}
+
+#accordion {
+border: 2px solid #dba900;
+width: 15%;
+margin: 0; /* Reset any margin */
+/* If you want to keep the accordion on the left */
+position: absolute; /* Use absolute positioning */
+left: 8%; /* Align to the left */
+top: 30%; /* Align to the top */
+}
+
+#accordion h3 {
+background-color: #dba900;
+color: black;
+padding: 10px;
+margin: 0; /* Ensure no default margin */
+}
+
+#accordion h3.ui-accordion-header-active,
+#accordion h3:hover {
+background-color: black;
+color: #dba900;
+}
+
+#accordion .ui-accordion-content {
+background-color: black;
+color: #dba900;
+border: 1px solid #dba900;
+padding: 10px;
+/* Remove the display and height properties, let jQuery UI control them */
+}
+
+/* Styles for the user details and about me sections */
+#accordion .user-details h4,
+#accordion .about-me h4 {
+color: #dba900; /* Theme color for titles */
+margin-bottom: 0.5em;
+}
+
+#accordion .user-details p,
+#accordion .about-me p {
+background-color: black;
+color: #dba900; /* Theme color for text */
+padding: 5px;
+border-radius: 5px;
+margin-bottom: 0.5em;
+}
+
+#accordion .user-details p strong {
+color: #FFFFFF; /* Adjusted color for better visibility */
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: -32%; /* Adjust this value as needed to bring the gallery closer to the nav bar */
+}
+
+.gallery img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.5);
+}
+
+
+.nav-profile-icon {
+    position: relative; /* Relative positioning for the container */
+    width: 40px; /* Fixed width for the icon */
+    height: 40px; /* Fixed height for the icon */
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden; /* Hide overflow to maintain the circle shape */
+    border: 2px solid #dba900; /* Optional border */
+}
+
+/* Navigation bar profile image */
+#navUserProfilePhoto {
+    width: 100%; /* Fill the container */
+    height: 100%; /* Fill the container */
+    object-fit: cover; /* Cover the area without stretching */
+    border-radius: 50%; /* Circular shape */
+    display: block; /* Remove inline display */
+    position: absolute; /* Absolute positioning inside the container */
+    top: 0;
+    left: 0;
+}
+
+#mainNav {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px 20px;
+    color: #dba900;
+    border: 1px solid #dba900;
+}
+
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 10px;
+    color: #dba900;
+    text-decoration: none;
+}
+
+.badge {
+    background-color: #000000;
+    color: #dba900;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+#userProfilePhoto {
+    width: 100%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    border-radius: 50%;
+    object-fit: cover; /* This will ensure the image covers the area without stretching */
+}
+
+#profile-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #dba900;
+    margin-top: 1%;
+    margin-left: 11%; /* Adjust this value to move the photo to the right */
+    /* Additional positioning if needed */
+    position: relative; /* Change to absolute if you need to position it out of the normal document flow */
+    left: 0; /* Adjust this if using absolute positioning */
+    top: 0; /* Adjust this if using absolute positioning */
+    z-index: 10; /* Ensure it's above other content if overlapping */
+}
+
+#profileUserProfilePhoto, #navUserProfilePhoto {
+    width: 100%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    border-radius: 50%;
+    object-fit: cover; /* This will ensure the image covers the area without stretching */
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px; /* You can set a max-width if required */
+}
+
+/* Caption of Modal Image (Image Text) - Optional */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#sidebar {
+  width: 80px;
+  position: fixed;
+  top: 8%;
+  bottom: 0;
+  left: 96%;
+  overflow-y: auto;
+  background-color: #000000;
+  color: #dba900;
+  border: 1px solid #dba900;
+}
+
+.user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#chatbox {
+  background-color: #000; /* Black background for the chatbox */
+  color: #dba900; /* Gold text color */
+  border: 2px solid #dba900; /* Gold border */
+  position: fixed; /* Fixed position to make it sticky */
+  bottom: 1%; /* Align to the bottom of the viewport */
+  right: 6%; /* Align to the right side of the viewport */
+  width: 400px; /* Width of the chatbox */
+  min-height: 450px; /* Minimum height of the chatbox */
+  z-index: 1000; /* Ensure it's above other content */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for better visibility */
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
+  overflow: hidden; /* Hide overflow */
+}
+
+#chat-header {
+  background-color: #111; /* Slightly lighter black for the header */
+  padding: 10px; /* Padding for the header */
+  display: flex; /* Flex display for alignment */
+  align-items: center; /* Center items vertically */
+  border-bottom: 1px solid #dba900; /* Border between header and messages */
+}
+
+#chat-user-img {
+  width: 30px; /* Size of the user image */
+  height: 30px; /* Size of the user image */
+  border-radius: 50%; /* Circular user image */
+  margin-right: 10px; /* Space after the image */
+}
+
+#chat-user-name {
+  color: #dba900; /* Gold text color for the user name */
+  flex-grow: 1; /* User name takes available horizontal space */
+}
+
+#chat-footer {
+  padding: 10px; /* Padding within the footer */
+  background: #111; /* Slightly lighter black for the footer */
+  display: flex; /* Flex display for alignment */
+}
+
+#chat-input {
+  flex-grow: 1; /* Input field takes up available space */
+  border: 1px solid #dba900; /* Gold border for the input */
+  background-color: #000; /* Black background for the input */
+  color: #dba900; /* Gold text color for the input */
+  padding: 5px 10px; /* Padding within the input */
+  margin-right: 10px; /* Space between input and send button */
+}
+
+#send-button, #close-chat-btn {
+  background-color: #dba900; /* Gold background for buttons */
+  color: #000; /* Black text color for buttons */
+  border: none; /* No border for buttons */
+  padding: 5px 12px; /* Padding within buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Add media queries to ensure responsiveness on different screen sizes */
+@media (max-width: 600px) {
+  #chatbox {
+    width: 95%; /* Full width on small screens */
+    bottom: 5%; /* Adjust position from bottom */
+    right: 2.5%; /* Adjust position from right */
+    min-height: 300px; /* Adjust height on small screens */
+  }
+}
+/* Icon styles */
+.icon {
+  color: #dba900; /* Gold color for icons */
+  margin-right: 5px; /* Space to the right of icons */
+  padding: 10px;
+}
+
+#chat-messages {
+  padding: 10px;
+}
+
+.chat-message-bubble {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.chat-avatar {
+  width: 30px; /* Set the size of the avatar */
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chat-message-bubble span {
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 15px;
+  border-bottom-right-radius: 0;
+  max-width: 70%;
+  word-wrap: break-word;
+  border: 1px solid #dba900;
+}
+
+/* Differentiate between sent and received messages */
+.chat-message-bubble.sent span {
+  background-color: #000000;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 0;
+  align-self: flex-start;
+  color: #dba900;
+}
+
+.chat-message-bubble.received span {
+  background-color: #000000;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 0;
+  align-self: flex-end;
+  color: #dba900;
+}
+ 
+.simple-footer {
+    background-color: #000000; /* Dark background for the footer */
+    color: #dba900; /* Gold text color */
+    text-align: center; /* Center the text */
+    padding: 2px 0; /* Padding on top and bottom for some space */
+    font-size: 14px; /* Smaller font size for the footer text */
+    position: fixed; /* Fixed positioning relative to the viewport */
+    bottom: 0%; /* Align to the bottom of the viewport */
+    left: 0; /* Align to the left of the viewport */
+    width: 100%; /* Full width */
+    z-index: 1000; /* High z-index to ensure it's above other content */
+    border: 1px solid #dba900;
+  }
+
+  .section {
+    width: 700px;
+    margin: 130px auto 30px; /* Centered horizontally with auto margins */
+    padding: 15px;
+    background: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 2px solid #dba900;
+    font-family: 'Kalnia', serif;
+    margin-top: 6%;
+  }
+  
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+  
+    .section-header h2 {
+      margin: 0;
+      color: #dba900;
+      font-size: 18px;
+    }
+  
+    .section-header a {
+      text-decoration: none;
+      color: #dba900;
+      font-size: 14px;
+    }
+
+    /* Base styling for the sidebar */
+    /* Main menu default state with icon only */
+.main-menu {
+    width: 50px; /* width enough to fit icons */
+    background: #000000;
+    border-left: 1px solid #dba900;
+    position: fixed;
+    top: 64px;
+    left: 0%;
+    height: 90%;
+    z-index: 1000;
+    border: 1px solid #dba900;
+    overflow: hidden;
+    -webkit-transition: width .05s linear;
+    transition: width .05s linear;
+}
+
+/* Styling for the menu list */
+.main-menu>ul {
+    margin: 10px 0;
+    padding: 1%;
+    list-style: none;
+}
+
+/* Styling for each menu item */
+.main-menu li {
+    position: relative;
+    width: 60px; /* Match the collapsed width */
+    margin-bottom: 13px;
+    margin-top: 15px;
+}
+
+/* Styling for the anchor tags */
+.main-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #dba900;
+    font-family: 'Kalnia', serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all .1s linear;
+    font-weight: bolder;
+}
+
+/* Styling for the icons */
+.main-menu li a i {
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Hidden text in the collapsed mode */
+.main-menu .nav-text {
+    display: none;
+}
+
+/* Logout styling */
+.main-menu>ul.logout {
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Set width to 100% of the parent */
+}
+
+/* Expanded state with text */
+nav.main-menu.expanded {
+    width: 250px;
+    overflow: visible;
+}
+
+/* Show text when expanded */
+nav.main-menu.expanded .nav-text {
+    display: block;
+}
+
+#comment-section {
+    background-color: black;
+    color: #dba900;
+    padding: 20px;
+    border-radius: 5px;
+    width: 150%;
+    max-width: 500px; /* Adjust as necessary */
+    margin: auto;
+    top: 5%;
+    position: relative;
+    height: 200px;
+  }
+  
+  #comment-section h3 {
+    color: #dba900;
+    margin-bottom: 10px;
+  }
+  
+  #comments-list {
+    max-height: 200px; /* Adjust as necessary */
+    overflow-y: auto;
+    margin-bottom: 10px;
+  }
+  
+  .comment {
+    background: #222; /* Slightly lighter black for contrast */
+    color: #dba900;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+  }
+  
+  #comment-box {
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    padding: 10px;
+    margin: 0 auto 6%; /* Centering the box with auto margins */
+    background: #333; /* Even lighter black for the input */
+    color: #dba900;
+    border: 1px solid #dba900;
+    border-radius: 3px;
+    position: relative; /* Keep it in normal document flow */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  #submit-comment {
+    background-color: #dba900;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+  
+  #submit-comment:hover {
+    background-color: #b38600; /* Darker gold on hover */
+  }
+  

@@ -1,0 +1,172 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Kalnia', sans-serif;
+    background-image: url('assests/DALL·E 2023-12-04 00.49.24 - A panoramic, widescreen image of a luxurious and elegant bedroom with a theme of black and gold. The bedroom features sophisticated decor, with a blac.png');
+    font-weight: bold;
+}
+
+
+.backdrop {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 340px; /* Adjusted width to fit the elements */
+    color: #dba900;
+    opacity: 0.9;
+    margin-top: -40%;
+    margin-left: 41%;
+    border: 1px solid #dba900;
+    font-weight: bold;
+}
+
+.login-form h2 {
+    color: #dba900;
+    margin-left: 0%;
+
+}
+
+.form-control {
+    margin-bottom: 10px;
+    color: #dba900; /* Changed font color to gold */
+    display: flex; /* Make label and input align in a row */
+    flex-direction: column; /* Stack them on top of each other */
+    align-items: center; /* Center align the items */
+}
+
+.form-control label {
+    color: #dba900; /* Set label color to gold */
+    margin-bottom: 5px; /* Spacing between label and input */
+}
+
+.login-form .form-control input {
+    background-color: black;
+    color: #dba900;
+    border: none;
+    border-bottom: 1px solid #dba900; /* adds a bottom border */
+}
+
+/* General input field styling */
+.login-form .form-control input {
+    background: transparent; /* Make the input field background transparent */
+    border: 2px solid #dba900; /* Gold colored border */
+    color: #dba900; /* Gold colored text */
+    font-size: 16px; /* Adjust the font size as needed */
+    padding: 10px; /* Add some padding inside the input fields */
+    margin-bottom: 10px; /* Add space between input fields */
+}
+
+/* Styling for when the input field is in focus */
+.login-form .form-control input:focus {
+    outline: none; /* Removes the default focus outline */
+    border-color: #dba900; /* Optional: Changes the border color to white when focused */
+    box-shadow: 0 0 5px #dba900; /* Optional: Adds a glow effect when focused */
+}
+
+/* Placeholder styling */
+.login-form .form-control input::placeholder {
+    color: #000000; /* Lighter text color for the placeholder */
+}
+
+/* Adjusting the color of autofilled input values */
+.login-form .form-control input:-webkit-autofill,
+.login-form .form-control input:-webkit-autofill:hover, 
+.login-form .form-control input:-webkit-autofill:focus, 
+.login-form .form-control input:-webkit-autofill:active  {
+    -webkit-text-fill-color: #dba900;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+.form-control input[type="text"],
+.form-control input[type="password"] {
+    width: 100%; /* Full width of the parent container */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #dba900; /* Gold border */
+    background-color: #000000; /* Black background */
+    color: #dba900; /* Gold text color */
+}
+
+.form-control input::placeholder {
+    color: #dba900;
+    background-color: #000000;
+}
+
+.form-control input[type="checkbox"] {
+    margin-right: 5px; /* Spacing between checkbox and label */
+}
+
+.form-control button {
+    background-color: #000;
+    color: #dba900; /* Gold text color */
+    border: 1px solid #dba900; /* Gold border */
+    cursor: pointer;
+    width: 100%; /* Full width of the parent container */
+    padding: 10px;
+    margin-top: 10px; /* Spacing between button and last input */
+}
+
+.form-control button:hover,
+.form-control .sign-up-btn:hover {
+    opacity: 0.9;
+}
+
+.form-control .sign-up-btn {
+    background-color: #000000; /* Gold background */
+    color: #dba900; /* Black text color */
+    width: 100%; /* Full width of the parent container */
+    padding: 10px;
+    margin-top: 5px; /* Spacing between button and sign-up button */
+}
+
+.forgot-password {
+    color: #dba900; /* Gold text color */
+    text-decoration: none;
+    text-align: center; /* Centered text */
+    font-size: 0.9em;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    position: absolute; /* Position it over the backdrop */
+    top: 20px; /* 20 pixels from the top */
+    left: 20px; /* 20 pixels from the left */
+    font-size: 2em; /* Size of the logo text */
+    color: #dba900; /* Gold color for the logo text */
+    font-weight: bold; /* Make the logo text bold */
+}
+
+.footer {
+    background-color: black;
+    color: #dba900; /* Text color */
+    text-align: center; /* Aligns the text to the center */
+    padding: 15px 0; /* Padding on top and bottom */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Footer width */
+    box-sizing: border-box;
+    opacity: 0.9;
+}
+
+.input-cover {
+    position: absolute;
+    z-index: 10;
+    /* Set other styles to cover the input field */
+}

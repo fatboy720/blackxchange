@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends List</title>
+    <link rel="stylesheet" href="Friends_List.css">
+</head>
+<body>
+    <div class="friends-list-container">
+        <ul class="friends-list">
+            <!-- Example Friend Entry -->
+            <li class="friend-item">
+                <span class="friend-name">Friend's Name</span>
+                <button class="delete-btn" onclick="deleteFriend('FriendId')">Delete</button>
+                <button class="report-btn" onclick="reportFriend('FriendId')">Report</button>
+            </li>
+            <!-- Repeat for each friend -->
+        </ul>
+    </div>
+    <script src="Friends_List.js"></script>
+</body>
+</html>

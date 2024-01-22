@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Message</title>
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kalnia">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://cdn.jsdelivr.net/npm/emojionearea/dist/emojionearea.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/emojionearea/dist/emojionearea.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Message_center.css">
+
+</head>
+<body>
+    
+    <div class="messenger">
+      <div class="message-list">
+        <!-- User Message Item -->
+        <div class="message-item">
+          <img src="path-to-user-image.jpg" alt="User" class="user-image">
+          <div class="user-info">
+            <div class="user-name">Username</div>
+            <div class="last-message">Hi, how are you doing?</div>
+          </div>
+        </div>
+        <!-- More message items... -->
+      </div>
+      
+      <div class="message-view">
+        <!-- Message Conversation -->
+        <div class="conversation">
+          <div class="message">Hi, how are you doing?</div>
+          <!-- More messages... -->
+        </div>
+        
+        <!-- Message Input -->
+        <div class="message-input">
+            <form method="post" action="send_message.php">
+                <input type="hidden" name="receiver_id" value="RECEIVER_ID_HERE">
+                <input type="text" name="message" placeholder="Type a message...">
+          <button onclick="sendMessage()">Send</button>
+          <button onclick="deleteConversation()">Delete</button>
+        </div>
+      </div>
+    </div>
+    <script src="Message_center.js"></script>
+</body>
+</html>
